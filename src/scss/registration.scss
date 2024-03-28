@@ -1,0 +1,163 @@
+.registration-countdown {
+  margin-top: 112px;
+}
+
+.countdown {
+  @include flex();
+
+  span {
+    white-space: nowrap;
+  }
+
+  &-content {
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid #2A4056;
+    padding: 40px 96px 48px;
+    box-shadow: 0px 20px 40px 0px #08639114;
+    background: #ffffff;
+  }
+
+  .sec {
+    display: none;
+  }
+
+  .num, .word {
+    @include font-geologica(54px, 400);
+    line-height: 64px;
+  }
+
+  .colon {
+    color: #79A6D2;
+    margin: 0 10px;
+  }
+
+  &__begin {
+    @include flex(space-between, center);
+    padding-bottom: 40px;
+  }
+
+  &__text {
+    @include font-geologica(36px, 300);
+    line-height: 40px;
+    margin-top: 10px;
+  }
+
+  &__divider {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #E4EDF6;
+  }
+
+  &-email {
+    &__description {
+      @include font-geologica(18px, 300);
+      margin: 32px 0 20px;
+      text-align: center;
+      line-height: 28px;
+    }
+
+    &__subscribe {
+      display: flex;
+      gap: 16px;
+    }
+
+    &__input {
+      width: 59%;
+    }
+
+    &__button {
+      width: 39%;
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .countdown__begin {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+
+  .countdown__text {
+    @include font-geologica(24px, 600);
+    line-height: 32px;
+    margin-top: 0;
+  }
+
+  .countdown-content {
+    padding: 24px 32px 32px;
+  }
+
+  .countdown__divider {
+    width: calc(100% - 64px);
+    left: 32px;
+  }
+
+  .countdown-email__description {
+    @include font-geologica(16px, 300);
+    line-height: 24px;
+    text-align: start;
+    margin-top: 20px;
+  }
+
+  .countdown-email__subscribe {
+    gap: 24px;
+  }
+
+  .countdown-email__input {
+    width: calc(50% - 12px);
+  }
+
+  .countdown-email__button {
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 935px) {
+  .registration-countdown {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 712px) {
+  .countdown-email__subscribe {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .countdown-email__input {
+    width: 100%;
+  }
+
+  .countdown-email__button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 636px) {
+  .registration-countdown {
+    margin-top: 56px;
+  }
+  .countdown__clockface .countdown span {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+  .countdown__text {
+    @include font-geologica(18px, 600);
+    line-height: 28px;
+  }
+
+  .countdown-content {
+    padding: 20px;
+
+    .colon {
+      margin: 0 6px;
+    }
+  }
+}
+

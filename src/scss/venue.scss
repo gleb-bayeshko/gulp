@@ -1,0 +1,349 @@
+.venue {
+  position: relative;
+  margin-top: 120px;
+
+  &__subtitle {
+    position: absolute;
+    top: 136px;
+    z-index: 100;
+  }
+
+  &-slider {
+    position: relative;
+  }
+}
+
+.venue-swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-overlay__text {
+    @include font-geologica(18px, 300);
+    line-height: 28px;
+    position: absolute;
+    left: 24px;
+    bottom: 16px;
+    color: #ffffff;
+  }
+
+  &-controls {
+    @include flex(space-between);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 645px;
+    z-index: 100;
+
+    .venue-swiper-fraction {
+      @include flex(center, center);
+      @include font-geologica(24px, 300);
+      line-height: 32px;
+      background: #ffffff;
+      border-radius: 100px;
+      min-width: 130px;
+      height: 48px;
+      padding: 0 20px;
+      margin: 0 24px;
+      box-shadow: 0px 20px 40px 0px #08639114;
+    }
+
+    .swiper-button-icon {
+      width: 48px !important;
+      height: 48px !important;
+    }
+
+    .venue-swiper-button-next {
+      &.swiper-button-disabled {
+        display: block !important;
+        opacity: 0.4;
+      }
+    }
+
+    .venue-swiper-button-prev {
+      &.swiper-button-disabled {
+        display: block !important;
+        opacity: 0.4;
+      }
+    }
+
+  }
+}
+
+.venue-swiper-slider {
+  @include clip;
+  width: 100%;
+  height: 888px;
+
+  .swiper-slide {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.venue-swiper-navigation {
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 10px 0;
+  height: 64px;
+  margin-top: 24px;
+
+  .swiper-wrapper {
+    .swiper-slide {
+      width: 100px;
+      margin: 0 8px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.venue-swiper-navigation .swiper-slide {
+  @include cursor-pointer;
+  width: 25%;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  overflow: hidden;
+  display: flex;
+  align-items: self-start;
+
+  img {
+    height: 54px;
+    border-radius: 8px;
+  }
+}
+
+.venue-swiper-navigation .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.videoIframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.venue-swiper {
+  .video-overlay {
+    @include flex(center, center);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: visibility 0.3s;
+
+    &_hidden {
+      visibility: hidden;
+    }
+
+    &__image {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+.venue-swiper-content-slider {
+  width: 100%;
+  height: 306px;
+  border-radius: 24px;
+
+  &-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -148px;
+    z-index: 100;
+  }
+
+  .swiper-slide {
+    @include flex(flex-start);
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px #E4EDF6;
+    border-radius: 24px;
+  }
+
+  .venue-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    width: 100%;
+    height: 100%;
+
+    &__text {
+      padding: 64px 0 64px 64px;
+    }
+
+    &__video {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    &__title {
+      @include font-geologica(24px, 600);
+      line-height: 32px;
+    }
+
+    &__description {
+      @include font-geologica(24px, 300);
+      line-height: 32px;
+      margin-top: 16px;
+    }
+
+    &__show-map {
+      @include font-geologica(18px, 300);
+      display: block;
+      line-height: 28px;
+      margin-top: 4px;
+      background: -webkit-linear-gradient(45deg, #00E686 6.02%, #00E6D2 34.92%, #00BFE6 99.91%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (max-width: 925px) {
+  .venue {
+    margin-top: 168px;
+
+    .video-overlay__button svg {
+      width: 80px;
+      height: 80px;
+    }
+
+    .video-overlay__text {
+      @include font-geologica(15px, 300);
+      line-height: 24px;
+      left: 20px;
+      bottom: 16px;
+    }
+
+    .venue-content {
+      grid-template-columns: 1fr;
+
+      .venue-content__text {
+        padding: 32px 32px 24px 32px;
+      }
+    }
+
+    .venue-swiper-content-slider-wrapper {
+      bottom: -398px;
+    }
+
+    .venue__subtitle {
+      color: #2a4056;
+      top: -64px;
+    }
+
+    .venue-swiper-controls {
+      top: initial;
+      bottom: 154px;
+    }
+
+    .venue-swiper-slider {
+      height: 608px;
+    }
+
+    .venue-swiper-content-slider {
+      height: auto;
+
+      .venue-content__title {
+        @include font-geologica(18px, 600);
+        line-height: 28px;
+      }
+
+      .venue-content__description {
+        @include font-geologica(18px, 300);
+        line-height: 28px;
+        margin-top: 8px;
+      }
+
+      .venue-content__show-map {
+        @include font-geologica(15px, 300);
+        line-height: 24px;
+        margin-top: 0;
+      }
+
+      .venue-content__video {
+        height: 387px;
+      }
+    }
+  }
+}
+
+@media (max-width: 636px) {
+  .venue {
+    margin-top: 104px;
+
+    .venue-content {
+      .venue-content__text {
+        padding: 20px 20px 32px 20px;
+      }
+    }
+
+    .video-overlay__text {
+      @include font-geologica(15px, 300);
+      left: 16px;
+      bottom: 12px;
+    }
+
+    .venue__subtitle {
+      top: -44px;
+    }
+
+    .venue-swiper-slider {
+      @include clip-mobile;
+    }
+
+    .venue-swiper-controls {
+      bottom: 12px;
+    }
+
+    .venue-swiper-content-slider-wrapper {
+      bottom: -356px;
+    }
+
+    .venue-swiper-content-slider {
+      .venue-content__description {
+        @include font-geologica(16px, 300);
+        line-height: 24px;
+        margin-top: 8px;
+      }
+
+      .venue-content__show-map {
+        @include font-geologica(16px, 300);
+        line-height: 24px;
+      }
+
+      .venue-content__video {
+        height: 180px;
+      }
+    }
+  }
+}

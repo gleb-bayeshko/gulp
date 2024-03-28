@@ -1,26 +1,18 @@
 @import "fonts";
-
-* {
-  font-family: Geologica, sans-serif;
-}
-
-body {
-  background: url("@img/seb.jpg");
-
-  span {
-    color: red;
-  }
-}
-
-@media (max-width: 768px) {
-  span {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    background: green;
-  }
-}
-
+@import "reset";
+@import "mixins";
+@import "base";
+@import "header";
+@import "banner";
+@import "registration";
+@import "aboutForum";
+@import "speakersSlider";
+@import "program";
+@import "price";
+@import "records";
+@import "reviews";
+@import "publications";
+@import "partners";
+@import "venue";
+@import "footer";
+@import "registrationPage";

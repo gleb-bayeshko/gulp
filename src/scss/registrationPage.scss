@@ -1,0 +1,311 @@
+.registration-page-body {
+  background: #ECF4F9;
+
+
+.registration-page-back {
+  @include flex(flex-start, center);
+  padding-top: 22px;
+
+  .registration-page-back__button {
+    @include flex(center, center);
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border-radius: 100%;
+    margin-right: 12px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .registration-page-back__text {
+    @include font-geologica(18px, 300);
+    line-height: 28px;
+  }
+}}
+
+.registration-page {
+  .registration-page__header {
+    @include font-unbound(46px, 700);
+    line-height: 48px;
+    margin: 74px 0 48px;
+  }
+
+  .registration-page-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 64px 64px;
+
+    .registration-page-card__participants {
+      position: relative;
+    }
+
+    .registration-page-card__description {
+      @include font-geologica(14px, 300);
+      line-height: 16px;
+      margin-top: 4px;
+      color: #8FA6BC;
+    }
+
+    .registration-page-card__inputs-line {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 16px;
+      max-width: 100% !important;
+      width: 100%;
+
+      .registration-page-card__input-block:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+
+    .registration-page-card__participants:not(:last-of-type) {
+      padding-bottom: 56px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #C6D9EC;
+      }
+    }
+
+    .participants-add-button {
+      @include flex(center, center);
+      width: 100%;
+      max-width: 307px;
+      height: 56px;
+      margin-top: 56px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      .participants-add-button__text {
+        font-size: 16px;
+      }
+    }
+
+    .registration-page-card__trash-icon {
+      @include cursor-pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+
+    .registration-page-card__inputs {
+      margin-top: 24px;
+      max-width: 656px;
+      width: 100%;
+    }
+
+    .registration-page-card__header {
+      @include font-unbound(22px, 500);
+      line-height: 24px;
+    }
+
+    .registration-page-card__subheader {
+      @include font-geologica(18px, 600);
+      line-height: 28px;
+      margin-top: 32px;
+    }
+
+    .registration-page-card__input-block:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    .registration-page-card__header_margin-top {
+      margin-top: 56px;
+    }
+
+    .registration-page-card__input {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    .registration-page-card__input_full {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .registration-page-card__input-block {
+      .registration-page-card__label {
+        @include font-geologica(15px, 300);
+        margin-bottom: 4px;
+        line-height: 20px;
+        display: block;
+      }
+    }
+  }
+}
+
+.registration-page-card__checkbox {
+  min-width: 20px;
+}
+
+.registration-page-card__checkbox-container {
+  @include flex(flex-start, center);
+}
+
+.registration-page-footer {
+  margin-top: 40px;
+
+  .registration-page-footer-checkboxes {
+    .registration-page-card__footer-checkbox-container:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    .registration-page-card__footer-checkbox-container {
+      align-items: flex-start;
+    }
+  }
+
+  .registration-page-footer-buttons {
+    @include flex;
+    margin-top: 40px;
+  }
+
+  .registration-page-footer-button {
+    height: 56px;
+    padding: 12px 40px;
+    border-radius: 16px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.registration-page {
+  padding-bottom: 152px;
+}
+
+@media (max-width: 925px) {
+  .registration-page .registration-page-card .registration-page-card__input {
+    max-width: 100%;
+  }
+
+  .registration-page .registration-page-card .registration-page-card__header_margin-top {
+    margin-top: 32px;
+  }
+
+  .registration-page .registration-page-card .registration-page-card__inputs {
+    margin-top: 24px;
+  }
+
+  .registration-page-back {
+    padding-top: 16px;
+  }
+
+  .registration-page {
+    .registration-page__header {
+      margin-top: 74px;
+      max-width: 466px;
+    }
+
+    .registration-page-card {
+      padding: 32px;
+    }
+  }
+
+  .registration-page {
+    padding-bottom: 77px;
+  }
+
+  .registration-page-footer-checkboxes,
+  .registration-page-footer-buttons {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 636px) {
+  .registration-page .registration-page-card .participants-add-button {
+    height: 48px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .registration-page {
+    .registration-page__header {
+      @include font-unbound(28px, 700);
+      line-height: 36px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+      max-width: 280px;
+    }
+
+    .registration-page-card {
+      padding: 24px;
+    }
+
+    .registration-page-card .registration-page-card__header {
+      @include font-unbound(18px, 500);
+      line-height: 24px;
+    }
+  }
+
+  .registration-page-footer-buttons {
+    flex-direction: column;
+  }
+
+  .registration-page-footer {
+    margin-top: 32px;
+  }
+
+  .registration-page {
+    padding-bottom: 71px;
+  }
+
+  .registration-page-footer-button {
+    width: 100%;
+    max-width: 100%;
+
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  .registration-page .registration-page-card .registration-page-card__inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-page .registration-page-card .registration-page-card__inputs-line .registration-page-card__input-block:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .registration-page-footer-checkboxes,
+  .registration-page-footer-buttons {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .registration-page-body .registration-page-back .registration-page-back__button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .registration-page .registration-page-card:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+
+  .registration-page .registration-page-card .registration-page-card__participants:not(:last-of-type) {
+    padding-bottom: 36px;
+  }
+}

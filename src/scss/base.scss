@@ -1,0 +1,359 @@
+* {
+  font-family: Geologica, sans-serif;
+  color: #2A4056;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  cursor: pointer;
+  background: transparent;
+  @include transition;
+}
+
+.btn-outline {
+  padding: 11px 24px 11px 24px;
+  border-radius: 11.43px;
+  border: 1px solid #2A4056;
+  font-family: Unbounded, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17px;
+
+  &:hover {
+    background: #E4EDF6;
+  }
+
+  &:active {
+    background: #C6D9EC;
+  }
+}
+
+.btn-gradient {
+  padding: 16px 40px 16px 40px;
+  border-radius: 16px;
+  background: linear-gradient(89.94deg, #00E686 0.02%, #00E6D2 48.92%, #00BFE6 99.91%);
+  box-shadow: 0px 24px 40px 0px #08CAE533;
+  color: #FFFFFF;
+  border: none;
+  @include transition;
+
+  &:hover {
+    background: linear-gradient(89.94deg, #00CC77 0.02%, #00CCBB 48.92%, #00AACC 99.91%);
+    box-shadow: 0px 24px 40px 0px #08CAE54D;
+  }
+
+  &:active {
+    background: linear-gradient(89.94deg, #00B368 0.02%, #00B3A4 48.92%, #0095B3 99.91%);
+    box-shadow: 0px 24px 40px 0px #08CAE54D;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      background: linear-gradient(89.94deg, #00E686 0.02%, #00E6D2 48.92%, #00BFE6 99.91%);
+      box-shadow: 0px 24px 40px 0px #08CAE533;
+    }
+
+    &:active {
+      background: linear-gradient(89.94deg, #00E686 0.02%, #00E6D2 48.92%, #00BFE6 99.91%);
+      box-shadow: 0px 24px 40px 0px #08CAE533;
+    }
+  }
+}
+
+.btn-black {
+  padding: 16px 40px 16px 40px;
+  border-radius: 16px;
+  background: #2A4056;
+  color: #FFFFFF;
+  @include font-unbound(18px, 500);
+  @include transition;
+  line-height: 24px;
+  border: none;
+
+  &:hover {
+    background: #4B739B;
+  }
+
+  &:active {
+    background: #7699BC;
+  }
+
+  &:disabled {
+    background: #2A4056;
+  }
+}
+
+.input {
+  @include font-geologica(18px, 300);
+  padding: 14px 20px 14px 20px;
+  border-radius: 16px;
+  border: 1px solid #C6D9EC;
+  color: #8599AD;
+  line-height: 28px;
+  @include transition;
+
+  &::placeholder {
+    color: #8599AD;
+  }
+
+  &:hover {
+    border: 1px solid #8FA6BC;
+  }
+
+  &:active, &:focus {
+    border-color: #2A4056;
+    color: #2A4056;
+
+    &::placeholder {
+      color: #2A4056;
+    }
+  }
+
+  &-outline {
+    background: transparent;
+
+    &:active, &:focus {
+      border-color: #C6D9EC;
+      color: #8599AD;
+
+      &::placeholder {
+        color: #8599AD;
+      }
+    }
+  }
+}
+
+.input-small {
+  @include font-geologica(18px, 300);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #C6D9EC;
+  color: #8599AD;
+  line-height: 28px;
+  @include transition;
+
+  &::placeholder {
+    color: #8599AD;
+  }
+
+  &:hover {
+    border: 1px solid #8FA6BC;
+  }
+
+  &:active, &:focus {
+    border-color: #2A4056;
+    color: #2A4056;
+
+    &::placeholder {
+      color: #2A4056;
+    }
+  }
+
+  &-outline {
+    background: transparent;
+
+    &:active, &:focus {
+      border-color: #C6D9EC;
+      color: #8599AD;
+
+      &::placeholder {
+        color: #8599AD;
+      }
+    }
+  }
+}
+
+.checkbox {
+  position: relative;
+  border: 1px solid #C6D9EC;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 .6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+
+.checkbox:hover {
+  border: 1px solid #8FA6BC
+}
+
+.checkbox:checked {
+  background: #00D68F;
+  border: none;
+
+  &:before {
+    opacity: 1;
+  }
+}
+
+.checkbox:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-74%, -50%);
+  z-index: 2;
+  opacity: 0;
+}
+
+.subtitle {
+  display: inline;
+  @include font-unbound(46px, 700);
+  @include text-center;
+  line-height: 48px;
+  padding-bottom: 8px;
+
+  background-image: linear-gradient(89.94deg, #17FF9C 0.02%, #40FFF3 48.92%, #60DEFF 99.91%);
+  background-position: 0 44px;
+  background-repeat: no-repeat;
+
+  &-container {
+    @include flex(center);
+  }
+
+  &-white {
+    color: white;
+  }
+}
+
+.subtitle_no-underline {
+  background-image: none;
+}
+
+.top-btn {
+  @include cursor-pointer;
+  @include flex(center, center);
+  visibility: hidden;
+  position: fixed;
+  bottom: 104px;
+  right: 40px;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  border: none;
+  box-shadow: 0px 20px 40px 0px #08639114;
+
+  svg {
+    width: 26px;
+  }
+}
+
+.glare {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  filter: blur(100px);
+}
+
+.glare_blue {
+  background: rgba(196, 255, 252, 0.70);
+}
+
+.glare_green {
+  background: rgba(7, 255, 160, 0.20);
+}
+
+.swiper-button-prev-icon {
+  transform: rotate(-180deg);
+}
+
+.main-container {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1030px) {
+  .btn-gradient {
+    @include font-unbound(15px, 500);
+    padding: 12px;
+    white-space: nowrap;
+    border-radius: 12px;
+    height: 48px;
+  }
+
+  .input {
+    border-radius: 12px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 925px) {
+  .top-btn {
+    width: 48px;
+    height: 48px;
+    right: 40px;
+    bottom: 67px;
+  }
+
+  .glare {
+    width: 448px;
+    height: 448px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    @include font-unbound(40px, 700);
+    line-height: 48px;
+  }
+}
+
+@media (max-width:636px) {
+  .glare {
+    width: 400px;
+    height: 400px;
+  }
+
+  .subtitle {
+    @include font-unbound(24px, 700);
+    background-position: 0px 26px;
+    line-height: 32px;
+    padding-bottom: 1px;
+  }
+
+  .wrapper {
+    max-width: 1160px;
+    padding: 0 20px;
+  }
+
+  .top-btn {
+    right: 20px;
+    bottom: 40px;
+  }
+}
+
+//@media (max-width: 470px) {
+//  .wrapper {
+//    max-width: 1160px;
+//    padding: 0 20px;
+//  }
+//}
+
+body {
+  overflow-x: hidden;
+}

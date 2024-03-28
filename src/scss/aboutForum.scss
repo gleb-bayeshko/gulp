@@ -1,0 +1,239 @@
+.about-forum {
+  margin-top: 148px;
+
+  .about-forum__wrapper {
+    position: relative;
+  }
+
+  .glare_blue {
+    top: 100px;
+    right: -300px;
+    left: auto;
+    z-index: -1;
+  }
+
+  .glare_green {
+    left: -338px;
+    bottom: -200px;
+    z-index: -1;
+  }
+
+  .about-forum-icon-blue,
+  .about-forum-icon-green {
+    position: absolute;
+  }
+
+  .about-forum-icon-blue {
+    left: -195px;
+    top: -53px;
+  }
+
+  .about-forum-icon-green {
+    right: -43px;
+    bottom: -68px;
+  }
+
+  &__content {
+    @include flex(space-between);
+    gap: 80px;
+    margin-top: 70px;
+  }
+
+  &__speakers {
+    max-width: 235px;
+    width: 100%;
+  }
+
+  &__numbers {
+    max-width: 216px;
+    width: 100%;
+  }
+
+  .speakers {
+    &__description {
+      margin-top: 24px;
+      @include font-geologica(15px, 300);
+      line-height: 24px;
+    }
+  }
+
+  .days {
+    &__intro {
+      @include font-geologica(24px, 300);
+      line-height: 32px;
+    }
+
+    &__item {
+      margin-top: 48px;
+    }
+
+    &__title {
+      @include font-geologica(24px, 600);
+      line-height: 32px;
+    }
+
+    &__description {
+      @include font-geologica(18px, 300);
+      line-height: 28px;
+      margin-top: 16px;
+    }
+
+    &__conclusion {
+      @include font-geologica(18px, 300);
+      line-height: 28px;
+      margin-top: 48px;
+    }
+  }
+
+  .numbers {
+    &__item {
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      @include font-unbound(46px, 700);
+      line-height: 48px;
+      background: -webkit-linear-gradient(45deg, #00E686 6.02%, #00E6D2 34.92%, #00BFE6 99.91%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__description {
+      @include font-geologica(24px, 300);
+      line-height: 32px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.days__intro_mobile, .days__conclusion_mobile {
+  display: none;
+}
+
+@media (max-width: 925px) {
+  .about-forum-icon-blue,
+  .about-forum-icon-green {
+    display: none;
+  }
+
+  .about-forum {
+    margin-top: 80px;
+
+    .glare_blue {
+      top: 600px;
+      right: -100px;
+      left: auto;
+    }
+
+    .glare_green {
+      left: -100px;
+      bottom: auto;
+    }
+  }
+
+  .days__intro_mobile {
+    display: block;
+    @include font-geologica(24px, 300);
+    line-height: 32px;
+  }
+
+  .about-forum .days__conclusion_mobile {
+    display: block;
+    @include font-geologica(18px, 300);
+    line-height: 28px;
+    margin-top: 0;
+  }
+
+  .days__intro_desktop, .days__conclusion_desktop {
+    display: none;
+  }
+
+  .about-forum__numbers {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    row-gap: 32px;
+  }
+
+  .about-forum__content {
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  .about-forum__speakers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    max-width: 100%;
+  }
+
+  .about-forum .speakers__description {
+    @include font-geologica(18px, 300);
+    @include flex(flex-start, center);
+    margin-top: 0;
+    line-height: 28px;
+  }
+
+  .speakers__img img {
+    width: 100%;
+  }
+
+  .about-forum {
+    .days__item {
+      margin-top: 0;
+
+      .days__title {
+      }
+    }
+
+    .days-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+
+      .days__description {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .about-forum .numbers__item {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 636px) {
+  .about-forum {
+    margin-top: 56px;
+
+    .about-forum__numbers {
+      column-gap: 24px;
+
+      .numbers__description {
+        @include font-geologica(18px, 300);
+        line-height: 24px;
+      }
+    }
+
+    .days__intro_mobile {
+      @include font-geologica(20px, 300);
+      line-height: 24px;
+    }
+
+    .about-forum__content {
+      gap: 48px;
+    }
+
+    .days-content {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+
+    .about-forum__speakers {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+  }
+}

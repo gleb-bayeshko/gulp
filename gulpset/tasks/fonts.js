@@ -23,7 +23,7 @@ export function ttfToWoff() {
 
 export function fontsStyle() {
   let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`
-
+try {
   fs.readdir(app.path.build.fonts, (err, fontsFiles) => {
     if (fontsFiles) {
       if (!fs.existsSync(fontsFile)) {
@@ -89,6 +89,10 @@ export function fontsStyle() {
       }
     }
   })
+} catch (e) {
+  console.log(e)
+}
+
 
   return app.gulp.src(`${app.path.srcFolder}`)
   function cb() {}

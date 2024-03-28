@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+    @@include('html/head.html', { title: 'Регистрация' })
+    <body class="registration-page-body">
+        <div class="registration-page">
+            <div class="wrapper">
+                <div class="registration-page-back">
+                    <a class="registration-page-back__button" href="./index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16" fill="none"><script xmlns=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.62571 7.24741L0.765625 7.99999L1.62571 8.75256L9.62571 15.7526L10.9427 14.2474L4.94567 8.99999L20.9991 8.99999L20.9991 6.99999L4.94567 6.99999L10.9427 1.75256L9.62571 0.247409L1.62571 7.24741Z" fill="url(#paint0_linear_473_1202)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_473_1202" x1="10.8823" y1="15.7582" x2="10.8697" y2="0.253029" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00E686"/>
+                                    <stop offset="0.489583" stop-color="#00E6D2"/>
+                                    <stop offset="1" stop-color="#00BFE6"/>
+                                </linearGradient>
+                            </defs>
+                            <script xmlns=""/>
+                        </svg>
+                    </a>
+                    <div class="registration-page-back__text">
+                        Назад
+                    </div>
+                </div>
+                <h1 class="registration-page__header">Регистрация на форум</h1>
+                <form class="registration-page-form">
+                    <div>
+                        <div class="registration-page-card">
+                            <h2 class="registration-page-card__header">Компания</h2>
+                            <div class="registration-page-card__inputs">
+                                <div class="registration-page-card__input-block">
+                                    <label for="companyName" class="registration-page-card__label">Название компании</label>
+                                    <input type="text" id="companyName" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                </div>
+                            </div>
+                            <h2 class="registration-page-card__header registration-page-card__header_margin-top">Контактное лицо</h2>
+                            <div class="registration-page-card__inputs">
+                                <div class="registration-page-card__input-block">
+                                    <label for="fio" class="registration-page-card__label">ФИО</label>
+                                    <input type="text" id="fio" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="contactPhone" class="registration-page-card__label">Телефон</label>
+                                    <input type="text" id="contactPhone" class="input-small registration-page-card__input input-phone-mask" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="contactEmail" class="registration-page-card__label">Эл. почта</label>
+                                    <input type="email" id="contactEmail" class="input-small registration-page-card__input" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <div class="registration-page-card__checkbox-container">
+                                        <input type="checkbox" id="contactEDO" class="checkbox registration-page-card__checkbox" />
+                                        <label for="contactEDO">Работаем в системе ЭДО Контур.Диадок</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration-page-card">
+                            <h2 class="registration-page-card__header">Участники</h2>
+                            <div class="registration-page-card__participants">
+                                <div class="registration-page-card__trash-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
+                                        <path d="M6 6V17.8C6 18.9201 6 19.4798 6.21799 19.9076C6.40973 20.2839 6.71547 20.5905 7.0918 20.7822C7.5192 21 8.07899 21 9.19691 21H14.8031C15.921 21 16.48 21 16.9074 20.7822C17.2837 20.5905 17.5905 20.2839 17.7822 19.9076C18 19.4802 18 18.921 18 17.8031V6M6 6H8M6 6H4M8 6H16M8 6C8 5.06812 8 4.60241 8.15224 4.23486C8.35523 3.74481 8.74432 3.35523 9.23438 3.15224C9.60192 3 10.0681 3 11 3H13C13.9319 3 14.3978 3 14.7654 3.15224C15.2554 3.35523 15.6447 3.74481 15.8477 4.23486C15.9999 4.6024 16 5.06812 16 6M16 6H18M18 6H20" stroke="#2A4056" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <script xmlns=""/>
+                                    </svg>
+                                </div>
+                                <h2 class="registration-page-card__subheader">Участник 1</h2>
+                                <div class="registration-page-card__inputs">
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantName1" class="registration-page-card__label">Фамилия</label>
+                                        <input type="text" id="participantName1" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantJob1" class="registration-page-card__label">Должность</label>
+                                        <input type="text" id="participantJob1" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantPhone1" class="registration-page-card__label">Телефон</label>
+                                        <input type="text" id="participantPhone1" class="input-small registration-page-card__input input-phone-mask" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantEmail1" class="registration-page-card__label">Эл. почта</label>
+                                        <input type="email" id="participantEmail1" class="input-small registration-page-card__input" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <div class="registration-page-card__checkbox-container">
+                                            <input type="checkbox" id="participantTelegram1" class="checkbox registration-page-card__checkbox" />
+                                            <label for="participantTelegram1">Добавить участника в группу Форума в Telegram</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="registration-page-card__participants">
+                                <div class="registration-page-card__trash-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
+                                        <path d="M6 6V17.8C6 18.9201 6 19.4798 6.21799 19.9076C6.40973 20.2839 6.71547 20.5905 7.0918 20.7822C7.5192 21 8.07899 21 9.19691 21H14.8031C15.921 21 16.48 21 16.9074 20.7822C17.2837 20.5905 17.5905 20.2839 17.7822 19.9076C18 19.4802 18 18.921 18 17.8031V6M6 6H8M6 6H4M8 6H16M8 6C8 5.06812 8 4.60241 8.15224 4.23486C8.35523 3.74481 8.74432 3.35523 9.23438 3.15224C9.60192 3 10.0681 3 11 3H13C13.9319 3 14.3978 3 14.7654 3.15224C15.2554 3.35523 15.6447 3.74481 15.8477 4.23486C15.9999 4.6024 16 5.06812 16 6M16 6H18M18 6H20" stroke="#2A4056" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <script xmlns=""/>
+                                    </svg>
+                                </div>
+                                <h2 class="registration-page-card__subheader">Участник 2</h2>
+                                <div class="registration-page-card__inputs">
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantName2" class="registration-page-card__label">Фамилия</label>
+                                        <input type="text" id="participantName2" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantJob2" class="registration-page-card__label">Должность</label>
+                                        <input type="text" id="participantJob2" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantPhone2" class="registration-page-card__label">Телефон</label>
+                                        <input type="text" id="participantPhone2" class="input-small registration-page-card__input input-phone-mask" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <label for="participantEmail2" class="registration-page-card__label">Эл. почта</label>
+                                        <input type="email" id="participantEmail2" class="input-small registration-page-card__input" />
+                                    </div>
+                                    <div class="registration-page-card__input-block">
+                                        <div class="registration-page-card__checkbox-container">
+                                            <input type="checkbox" id="participantTelegram2" class="checkbox registration-page-card__checkbox" />
+                                            <label for="participantTelegram2">Добавить участника в группу Форума в Telegram</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline participants-add-button" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve"><script xmlns=""/><rect fill="none" height="50" width="50"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="9" x2="41" y1="25" y2="25"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="25" x2="25" y1="9" y2="41"/><script xmlns=""/></svg>
+                                        <span class="participants-add-button__text">Добавить участника</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration-page-card">
+                            <h2 class="registration-page-card__header">Реквизиты счёта для оплаты</h2>
+                            <div class="registration-page-card__inputs">
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesCompany" class="registration-page-card__label">Компания</label>
+                                    <input type="text" id="requisitesCompany" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                </div>
+                            </div>
+                            <div class="registration-page-card__inputs registration-page-card__inputs-line">
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesINN" class="registration-page-card__label">ИНН</label>
+                                    <input type="text" id="requisitesINN" class="input-small registration-page-card__input" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesOGRN" class="registration-page-card__label">ОГРН</label>
+                                    <input type="text" id="requisitesOGRN" class="input-small registration-page-card__input" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesKPP" class="registration-page-card__label">КПП</label>
+                                    <input type="text" id="requisitesKPP" class="input-small registration-page-card__input" />
+                                </div>
+                            </div>
+                            <div class="registration-page-card__inputs">
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesAddress" class="registration-page-card__label">Юридический адрес</label>
+                                    <input type="text" id="requisitesAddress" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesCheckAcc" class="registration-page-card__label">Расчётный счёт</label>
+                                    <input type="text" id="requisitesCheckAcc" class="input-small registration-page-card__input" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesBank" class="registration-page-card__label">Банк</label>
+                                    <input type="text" id="requisitesBank" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesAddAcc" class="registration-page-card__label">Кор. счёт</label>
+                                    <input type="text" id="requisitesAddAcc" class="input-small registration-page-card__input" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="requisitesBIK" class="registration-page-card__label">БИК</label>
+                                    <input type="text" id="requisitesBIK" class="input-small registration-page-card__input" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration-page-card">
+                            <h2 class="registration-page-card__header">Почтовый адрес</h2>
+                            <div class="registration-page-card__description">На этот адрес мы отправим закрывающие документы</div>
+                            <div class="registration-page-card__inputs">
+                                <div class="registration-page-card__input-block">
+                                    <label for="mailIndex" class="registration-page-card__label">Индекс</label>
+                                    <input type="text" id="mailIndex" class="input-small registration-page-card__input" />
+                                </div>
+                                <div class="registration-page-card__input-block">
+                                    <label for="mailAddress" class="registration-page-card__label">Адрес</label>
+                                    <input type="text" id="mailAddress" class="input-small registration-page-card__input registration-page-card__input_full" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="registration-page-footer">
+                        <div class="registration-page-footer-checkboxes">
+                            <div class="registration-page-card__checkbox-container registration-page-card__footer-checkbox-container">
+                                <input type="checkbox" id="accept1" class="checkbox registration-page-card__checkbox" />
+                                <label for="accept1">Я принимаю условия договора оферты</label>
+                            </div>
+                            <div class="registration-page-card__checkbox-container registration-page-card__footer-checkbox-container">
+                                <input type="checkbox" id="accept2" class="checkbox registration-page-card__checkbox" />
+                                <label for="accept2">Я принимаю условия Политики в отношении обработки персональных данных ООО «АБК»</label>
+                            </div>
+                            <div class="registration-page-card__checkbox-container registration-page-card__footer-checkbox-container">
+                                <input type="checkbox" id="accept3" class="checkbox registration-page-card__checkbox" />
+                                <label for="accept3">Я даю согласие на обработку моих персональных данных</label>
+                            </div>
+                            <div class="registration-page-card__checkbox-container registration-page-card__footer-checkbox-container">
+                                <input type="checkbox" id="accept4" class="checkbox registration-page-card__checkbox" />
+                                <label for="accept4">Настоящим я подтверждаю, что сведения о субъектах персональных данных (участниках «Форума лидеров цифрового развития») предоставляются с соблюдением требований пп. 1 п. 1 ст. 6 и иных положений Федерального закона от 27.07.2006 N 152-ФЗ «О персональных данных»</label>
+                            </div>
+                            <div class="registration-page-card__checkbox-container registration-page-card__footer-checkbox-container">
+                                <input type="checkbox" id="accept5" class="checkbox registration-page-card__checkbox" />
+                                <label for="accept5">Я согласен получать рекламно-информационную рассылку от ООО «АБК»</label>
+                            </div>
+                        </div>
+                        <div class="registration-page-footer-buttons">
+                            <button type="button" class="btn btn-gradient registration-page-footer-button" disabled>Зарегистрироваться</button>
+                            <button class="btn btn-outline registration-page-footer-button" type="button">Отменить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/imask"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

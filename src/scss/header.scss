@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+
+  &__list {
+    display: flex;
+
+    li {
+      @include font-geologica(18px, 300);
+      margin-right: 24px;
+      line-height: 28px;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: #2373c9;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0 24px;
+
+    li {
+      @include font-geologica(15px, 300);
+      line-height: 24px;
+      margin-right: 16px;
+    }
+
+    .btn {
+      padding: 4px 14px 4px 14px;
+    }
+  }
+}
+
+@media (max-width: 655px) {
+  .header {
+    display: none;
+  }
+
+  .header-wrapper {
+    padding-bottom: 20px !important;
+  }
+}

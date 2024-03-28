@@ -1,8 +1,30 @@
 <!doctype html>
 <html lang="en">
-    @@include('html/head.html', { title: 'TITLE' })
+    @@include('html/head.html', { title: 'Главная' })
     <body>
-        @@include('html/header.html')
-        @@include('html/footer.html')
+        <button type="button" class="top-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none"><script xmlns=""/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1291 1.39365L11.0003 0.103516L9.87142 1.39365L0.538086 12.0603L2.79582 14.0358L8.99996 6.94538L8.99996 27.3329H13L13 6.94463L19.2048 14.0358L21.4625 12.0603L12.1291 1.39365Z" fill="#2A4056"/>
+                <script xmlns=""/>
+            </svg>
+        </button>
+        <div class="main-container">
+            @@include('html/header.html')
+            @@include('html/banner.html')
+            @@include('html/registration.html')
+            @@include('html/aboutForum.html')
+            @@include('html/speakersSlider.html')
+            @@include('html/program.html')
+            @@include('html/price.html')
+            @@include('html/records.html')
+            @@include('html/reviews.html')
+            @@include('html/publications.html')
+            @@include('html/partners.html')
+            @@include('html/venue.html')
+            @@include('html/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
     </body>
 </html>

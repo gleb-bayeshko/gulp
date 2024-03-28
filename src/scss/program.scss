@@ -1,0 +1,270 @@
+.program {
+  margin-top: 305px;
+
+  .program__wrapper {
+    position: relative;
+  }
+
+  .glare_green {
+    top: 0;
+    right: -300px;
+    left: auto;
+    z-index: -1;
+  }
+
+  .glare_blue {
+    left: -338px;
+    bottom: -200px;
+    z-index: -1;
+  }
+
+  &-content {
+    margin-top: 80px;
+  }
+
+  .tab-content__topic-icon-down {
+    display: none;
+  }
+}
+
+.tab-container {
+  position: relative;
+  display: flex;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: #C6D9EC;
+    z-index: 0;
+  }
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0;
+  padding-bottom: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #8FA6BC;
+
+  @include font-geologica(36px, 300);
+  line-height: 40px;
+  margin-right: 40px;
+}
+
+.tab-button.active {
+  opacity: 1;
+  background: -webkit-linear-gradient(45deg, #00E686 6.02%, #00E6D2 34.92%, #00BFE6 99.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  background: linear-gradient(89.94deg, #00E686 0.02%, #00E6D2 48.92%, #00BFE6 99.91%);
+  transition: transform 0.3s;
+  bottom: 0;
+  z-index: 1;
+}
+
+.tab-content {
+  margin-top: 48px;
+
+  &__item {
+    @include flex;
+    gap: 32px;
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__time {
+    width: 160px;
+    @include font-geologica(24px, 300);
+    line-height: 32px;
+  }
+
+  &__topic {
+    width: 31.43%;
+    @include font-geologica(24px, 600);
+    line-height: 32px;
+  }
+
+  &__speakers {
+    width: 48.57%;
+    padding-left: 32px;
+
+    .tab-speakers__item {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      .tab-speakers__name {
+        @include font-geologica(18px, 300);
+        line-height: 28px;
+      }
+
+      .tab-speakers__job {
+        @include font-geologica(15px, 300);
+        line-height: 20px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: -20px;
+        top: 10px;
+        background: #2A4056;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+.tab-content-page {
+  &_disabled {
+    display: none;
+  }
+}
+
+@media (max-width: 925px)  {
+  .program {
+    margin-top: 192px;
+
+    .glare_green {
+      top: 76px;
+      right: auto;
+      left: -100px;
+    }
+
+    .glare_blue {
+      left: auto;
+      bottom: 150px;
+      right: -150px;
+    }
+
+    .program-content {
+      margin-top: 40px;
+    }
+
+    .tab-content {
+      margin-top: 40px;
+    }
+
+    .tab-content__item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 32px auto;
+      column-gap: 32px;
+      row-gap: 0;
+      grid-template-areas:
+        "time speakers"
+        "topic speakers";
+    }
+
+    .tab-content__time {
+      grid-area: time;
+      width: 100%;
+    }
+
+    .tab-content__topic {
+      grid-area: topic;
+      width: 100%;
+      @include font-geologica(18px, 600);
+      line-height: 24px;
+      margin-top: 8px;
+    }
+
+    .tab-content__speakers {
+      grid-area: speakers;
+      width: 100%;
+    }
+  }
+
+  .tab-content__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 636px) {
+  .program {
+    margin-top: 120px;
+
+    .glare_green {
+      top: 76px;
+      right: auto;
+      left: -150px;
+    }
+
+    .glare_blue {
+     display: none;
+    }
+
+    .tab-button {
+      @include font-geologica(24px, 300);
+      line-height: 32px;
+      margin-right: 0;
+
+      &:first-child {
+        margin-right: 32px;
+      }
+    }
+
+    .tab-content__topic-icon-down {
+      @include cursor-pointer;
+      display: block;
+    }
+
+    .tab-content__item {
+      grid-template-columns: 1fr;
+      row-gap: 0;
+      grid-template-areas:
+        "time"
+        "topic"
+        "speakers";
+    }
+
+    .tab-content__topic {
+      @include flex(space-between);
+      margin-top: 8px;
+
+      .tab-content__topic-text {
+        max-width: 288px;
+      }
+
+      .tab-content__topic-icon-down {
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .tab-content__speakers {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s;
+    }
+
+    .tab-content__item {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    .tab-speakers__item:first-child {
+      margin-top: 12px;
+    }
+  }
+}

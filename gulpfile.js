@@ -9,6 +9,7 @@ import { html } from './gulpset/tasks/html.js'
 import { server } from './gulpset/tasks/server.js'
 import { scss } from './gulpset/tasks/scss.js'
 import { images } from './gulpset/tasks/images.js'
+import { js } from './gulpset/tasks/js.js'
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulpset/tasks/fonts.js'
 
 global.app = {
@@ -22,11 +23,12 @@ function watcher() {
   gulp.watch(path.watch.html, html)
   gulp.watch(path.watch.scss, scss)
   gulp.watch(path.watch.images, images)
+  gulp.watch(path.watch.js, js)
 }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle)
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, images))
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images))
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 

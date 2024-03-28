@@ -1,0 +1,239 @@
+.footer {
+  position: relative;
+  margin-top: -400px;
+  min-height: 1000px;
+  background-image: url("../img/darkBgbig.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 700px;
+  padding-bottom: 80px;
+
+  .footer-divider {
+    width: 100%;
+    background: #FFFFFF33;
+    height: 1px;
+    margin: 72px 0 48px;
+  }
+
+  &__subtitle {
+    text-align: start !important;
+  }
+
+  &__subtitle-container {
+    justify-content: flex-start;
+  }
+
+  .footer-contacts {
+    display: grid;
+    grid-template-columns: auto 448px;
+    margin-top: 64px;
+
+    &__emails {
+      display: grid;
+      grid-template-columns: repeat(2, min-content);
+      column-gap: 32px;
+      row-gap: 32px;
+    }
+
+    &__email-title {
+      @include font-geologica(18px, 600);
+      line-height: 28px;
+      color: #ffffff;
+    }
+
+    &__email-link {
+      @include font-geologica(24px, 300);
+      line-height: 32px;
+      background: -webkit-linear-gradient(45deg, #00E686 6.02%, #00E6D2 34.92%, #00BFE6 99.91%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__phone {
+      @include flex;
+      flex-direction: column;
+    }
+
+    &__phone-link {
+      @include font-geologica(54px, 400);
+      line-height: 64px;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+
+    &__input {
+      margin-bottom: 16px;
+      width: 100%;
+      outline: none;
+    }
+
+    &__button {
+      width: 100%;
+      max-width: 364px;
+    }
+  }
+
+  .footer-info {
+    display: grid;
+    grid-template-columns: auto 448px;
+
+    .footer-copyright {
+      @include flex(flex-start, flex-end);
+
+      &__item {
+        @include font-geologica(15px, 300);
+        line-height: 24px;
+        color: #C6D9EC;
+
+        &:not(:last-child) {
+          margin-right: 48px;
+        }
+      }
+    }
+
+    .footer-info-links {
+      &__item {
+        @include font-geologica(15px, 300);
+        display: block;
+        line-height: 24px;
+        color: #C6D9EC;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .footer {
+    .footer-contacts__emails {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 925px) {
+  .footer {
+    padding-top: 930px;
+    padding-bottom: 68px;
+
+    .footer__subtitle-container {
+      justify-content: center;
+
+      .footer__subtitle {
+        text-align: center !important;
+      }
+    }
+
+    .footer-divider {
+      margin: 40px 0;
+    }
+
+    .footer-info {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+    }
+
+    .footer-contacts {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+      margin-top: 40px;
+
+      .footer-contacts__emails {
+        grid-template-rows: repeat(3, min-content);
+        row-gap: 24px;
+      }
+
+      .footer-contacts__phone {
+        padding-top: 28px;
+      }
+
+      .footer-contacts__phone-link {
+        @include font-geologica(36px, 300);
+        line-height: 40px;
+        margin-bottom: 32px;
+      }
+
+      .footer-contacts__email-title {
+        @include font-geologica(15px, 600);
+        line-height: 24px;
+      }
+
+      .footer-contacts__email-link {
+        @include font-geologica(18px, 300);
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 636px) {
+  .footer {
+    margin-top: -100px;
+    padding-top: 516px;
+    padding-bottom: 40px;
+
+    .footer-divider {
+      margin: 24px 0;
+    }
+
+    .footer-contacts__button {
+      max-width: 100%;
+    }
+
+    .footer-info {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "footer-info-links"
+        ".";
+      .footer-info-links__item:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      .footer-copyright {
+        margin-top: 24px;
+      }
+    }
+
+    .footer-info-links {
+      grid-area: footer-info-links;
+    }
+
+    .footer-contacts {
+      grid-template-columns: 1fr;
+      margin-top: 24px;
+
+      .footer-contacts__phone-link {
+        margin-bottom: 24px;
+      }
+
+      .footer-contacts__input {
+        margin-bottom: 12px;
+      }
+
+      .footer-contacts__phone {
+        padding-top: 24px;
+      }
+
+      .footer-contacts__emails {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, min-content);
+        column-gap: 24px;
+        grid-template-areas:
+          "participants participants"
+          ". .";
+      }
+
+      .footer-contacts__email-participants {
+        grid-area: participants;
+      }
+
+      .footer-contacts__email-link {
+        @include font-geologica(16px, 300);
+        line-height: 24px;
+      }
+    }
+  }
+}

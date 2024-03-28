@@ -1,0 +1,278 @@
+.price {
+  position: relative;
+  margin-top: 276px;
+
+  .price-background {
+    @include clip;
+    width: 100%;
+    height: 1160px;
+    position: absolute;
+    background: linear-gradient(332.74deg, #CCFFE3 3.39%, #80F7FF 120.74%);
+    z-index: 1;
+    top: -160px;
+  }
+
+  .price-icon-bottom,
+  .price-icon-top {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .price-icon-bottom {
+    left: -63px;
+    bottom: -211px;
+  }
+
+  .price-icon-top {
+    right: -65px;
+    top: -200px;
+  }
+
+  .price-background_price-tickets {
+    height: 1060px;
+  }
+
+  .price-background_price-one-ticket {
+    height: 1000px;
+  }
+
+  .price-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-registration-btn {
+    @include flex(center);
+    margin-top: 64px;
+  }
+
+  &-description {
+    @include font-geologica(24px, 300);
+    @include text-center;
+    line-height: 32px;
+    margin-top: 72px;
+  }
+
+  &-registration {
+    margin-top: 40px;
+
+    .countdown-content {
+      border-color: #E4EDF6;
+    }
+  }
+
+  &-services {
+    margin-top: 56px;
+
+    &__title {
+      @include font-geologica(24px, 600);
+      @include text-center;
+      line-height: 32px;
+    }
+
+    &-items {
+      @include flex(center);
+      max-width: 832px;
+      margin: 24px auto 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      padding: 8px 24px 8px 24px;
+      border-radius: 12px;
+      border: 1px solid #2A4056;
+      @include font-geologica(18px, 300);
+      line-height: 28px;
+    }
+
+    &-note {
+      @include flex;
+      max-width: 352px;
+      margin: 27px auto 0;
+
+      &__icon {
+        margin-right: 8px;
+      }
+
+      &__text {
+        @include font-geologica(15px, 300);
+        line-height: 20px;
+      }
+    }
+  }
+
+  &-tickets {
+    @include flex(space-between);
+    gap: 32px;
+
+    &__item {
+      width: 100%;
+      padding: 24px 24px 32px 24px;
+      border-radius: 64px 0px 64px 0px;
+      background: #ffffff;
+      box-shadow: 0px 20px 40px 0px #08639114;
+    }
+
+    &__item-solo {
+      @include flex(center, center);
+      width: 100%;
+      max-width: 736px;
+      margin: 0 auto;
+      padding: 48px 178px;
+      border-radius: 64px 0px 64px 0px;
+      background: #ffffff;
+      box-shadow: 0px 20px 40px 0px #08639114;
+    }
+
+    &__date {
+      @include font-geologica(24px, 600);
+      @include text-center;
+      line-height: 32px;
+    }
+
+    &__sum {
+      @include font-geologica(54px, 400);
+      @include text-center;
+      line-height: 64px;
+      margin-top: 8px;
+    }
+
+    &__sum-solo {
+      @include font-geologica(78px, 400);
+      @include text-center;
+      line-height: 64px;
+      margin-top: 8px;
+    }
+
+    .price-tickets__green .price-tickets__sum {
+      color: #00D68F;
+    }
+
+    .price-tickets__teal .price-tickets__sum {
+      color: #00D6D6;
+    }
+
+    .price-tickets__blue .price-tickets__sum {
+      color: #00BFFF;
+    }
+
+    .price-tickets__item_disabled {
+      opacity: 0.4;
+    }
+  }
+}
+
+.price-tickets {
+  margin-top: 32px;
+}
+
+.price-tickets-solo {
+  margin-top: 64px;
+}
+
+@media (max-width: 925px) {
+  .price {
+    margin-top: 168px;
+
+    .price-icon-bottom {
+      display: none;
+    }
+
+    .price-icon-top {
+      display: none;
+    }
+
+    .price-background {
+      top: -124px;
+      height: 1124px;
+    }
+
+    .price-background_price-tickets {
+      height: 1420px;
+    }
+
+    .price-background_price-one-ticket {
+      height: 1026px;
+    }
+
+    .price-tickets__item-solo {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .price-description {
+      text-align: start;
+      margin-top: 40px;
+    }
+
+    .price-description_br {
+      display: none;
+    }
+
+    .price-tickets {
+      flex-direction: column;
+    }
+
+    .price-services {
+      margin-top: 40px;
+
+      .price-services__title {
+        text-align: start;
+        @include font-geologica(18px, 600);
+        line-height: 28px;
+      }
+
+      .price-services-items {
+        margin-top: 16px;
+        justify-content: flex-start;
+      }
+
+      .price-services-note {
+        margin-top: 40px;
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 636px) {
+  .price {
+    .price-background {
+      @include clip-mobile;
+      height: calc(100% + 180px);
+      top: -92px;
+    }
+
+    .price-description {
+      @include font-geologica(18px, 300);
+      line-height: 24px;
+    }
+
+    .price-registration {
+      margin-top: 32px;
+    }
+
+    .price-services {
+      margin-top: 32px;
+    }
+
+    .price-services__item {
+      @include font-geologica(15px, 300);
+      line-height: 20px;
+    }
+
+    .price-services .price-services-note {
+      margin-top: 32px;
+    }
+
+    .price-registration-btn {
+      margin-top: 28px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

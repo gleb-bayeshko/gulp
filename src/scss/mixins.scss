@@ -1,0 +1,45 @@
+@mixin flex($justify: start, $align: start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin transition {
+  transition: 0.3s;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin cursor-pointer {
+  cursor: pointer;
+}
+
+@mixin cut-rows($rowsNum) {
+  display: -webkit-box;
+  -webkit-line-clamp: $rowsNum;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin clip {
+  clip-path: polygon(100% 0, 100% 88%, 0 100%, 0 12%);
+}
+
+@mixin clip-mobile {
+  clip-path: polygon(100% 0, 100% 95%, 0 100%, 0 5%);
+}
+
+@mixin font-geologica($size, $weight: 400) {
+  font-family: Geologica, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin font-unbound($size, $weight) {
+  font-family: Unbounded, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}

@@ -1,0 +1,219 @@
+.banner {
+  .banner-container {
+    position: relative;
+  }
+
+  .banner__subheader {
+    position: relative;
+  }
+
+  .banner-title-icon {
+    position: absolute;
+    top: -43px;
+    left: -86px;
+
+    svg {
+      width: 72px;
+      height: 125px;
+    }
+  }
+
+  .glare_green {
+    top: -70px;
+    right: 353px;
+    left: auto;
+    z-index: -1;
+  }
+
+  .glare_blue {
+    left: -466px;
+    bottom: -330px;
+    z-index: -1;
+  }
+
+  .banner__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 928px;
+    width: 100%;
+  }
+
+  &-content {
+    padding-top: 236px;
+    position: relative;
+    z-index: 20;
+  }
+
+  &-description {
+    @include flex(start);
+    @include font-geologica(36px, 300);
+
+    margin-top: 24px;
+
+    .banner-description__item {
+      &:not(:last-child) {
+        padding-right: 32px;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background: #2A4056;
+        }
+      }
+
+      &:not(:first-child) {
+        padding-left: 24px;
+      }
+    }
+  }
+
+  &__subheader {
+    @include font-geologica(36px, 300);
+    line-height: 40px;
+  }
+
+  &__header {
+    @include font-unbound(60px, 700);
+    line-height: 72px;
+    max-width: 626px;
+    margin-top: 8px;
+  }
+}
+
+
+@media (max-width: 1125px) {
+  .banner {
+    .banner__img {
+      max-width: 740px;
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  .banner {
+    .banner__img {
+      max-width: 640px;
+    }
+
+    .glare_green {
+      right: -151px;
+      top: -43px;
+    }
+
+    .glare_blue {
+      left: -200px;
+      bottom: -94px;
+    }
+
+    .banner-content {
+      margin-left: 32px;
+    }
+
+    .banner-title-icon {
+      top: auto;
+      left: -61px;
+      bottom: -34px;
+
+      svg {
+        width: 56px;
+        height: 100.44px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    .banner__img {
+      max-width: 100%;
+    }
+
+    &-content {
+      padding-top: 327px;
+    }
+
+    &__header {
+      @include font-unbound(46px, 700);
+      line-height: 48px;
+      max-width: 594px;
+    }
+
+    &-description {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media (max-width: 655px) {
+  .banner {
+    .banner-title-icon {
+      top: auto;
+      left: -41px;
+      bottom: -24px;
+
+      svg {
+        width: 40px;
+        height: 71.3px;
+      }
+    }
+
+    .glare_green {
+      right: -151px;
+      top: -43px;
+    }
+
+    .glare_blue {
+      left: -301px;
+      bottom: -202px;
+    }
+
+    .banner-content {
+      margin-left: 24px;
+    }
+  }
+
+  .banner .banner__img {
+    max-width: 412px;
+  }
+
+  .banner-content {
+    padding-top: 136px;
+  }
+
+  .banner__subheader {
+    @include font-geologica(24px, 300);
+    line-height: 32px;
+  }
+
+  .banner__header {
+    @include font-unbound(28px, 700);
+    line-height: 36px;
+    max-width: 358px;
+  }
+
+  .banner-description {
+    flex-direction: column;
+    @include font-geologica(24px, 300);
+    line-height: 32px;
+
+    .banner-description__item:not(:first-child) {
+      padding-left: 0;
+    }
+
+    .banner-description__item:not(:last-child) {
+      &:after {
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+}
